@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fragmentBackground">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mainView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/headerIcon"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="10dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toTopOf="@+id/cityName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/cityName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:textSize="@dimen/city_name_text_size"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/cityCoordinates"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Москва" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/cityCoordinates"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="41dp"
+            app:layout_constraintBottom_toTopOf="@+id/temperatureLabel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="lt/ln: 55.755826, 37.617299900000035" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/weatherIcon"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="33dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="34dp"
+            app:layout_constraintBottom_toTopOf="@+id/feelsLikeValue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/temperatureLabel"
+            app:layout_constraintTop_toBottomOf="@+id/cityName"
+            tools:srcCompat="@drawable/ic_bkn_d" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/weatherCondition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="40dp"
+            app:layout_constraintEnd_toEndOf="@+id/weatherIcon"
+            app:layout_constraintTop_toBottomOf="@+id/weatherIcon"
+            tools:text="Облачно" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/temperatureLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="220dp"
+            android:layout_marginEnd="103dp"
+            android:text="@string/temperature_label"
+            app:layout_constraintEnd_toStartOf="@+id/weatherIcon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/temperatureValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="9dp"
+            android:textSize="@dimen/temperature_value_text_size"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/temperatureLabel"
+            app:layout_constraintTop_toBottomOf="@+id/temperatureLabel"
+            tools:text="+15" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/feelsLikeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="46dp"
+            android:layout_marginTop="39dp"
+            android:text="@string/feels_like_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/temperatureValue" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/feelsLikeValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="15dp"
+            android:textSize="@dimen/feels_like_text_size"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/feelsLikeLabel"
+            app:layout_constraintTop_toBottomOf="@+id/feelsLikeLabel"
+            tools:text="-23" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include
+        android:id="@+id/includedLoadingLayout"
+        layout="@layout/loading_layout" />
+</FrameLayout>
+
