@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">OpenWeather</string>
+    <string name="search">Search</string>
+    <string name="city">Moscow</string>
+    <string name="date">01 January 1970, 23:59 PM</string>
+    <string name="options">Clear Sky</string>
+    <string name="temp">29°C</string>
+    <string name="min_temp">Min Temp:</string>
+    <string name="max_temp">Max Temp:</string>
+    <string name="options_footer">Восход</string>
+    <string name="clock_footer">05:00 AM</string>
+    <string name="options_footer_sunset">Закат</string>
+    <string name="options_footer_wind">Ветер</string>
+    <string name="options_footer_pressure">Давление</string>
+    <string name="options_footer_humidity">Влажность</string>
+    <string name="footer_copyr">Created By</string>
+    <string name="footer_name_copy">MrRoot</string>
+    <string name="error">Что то пошло не так</string>
+</resources>
